@@ -10,6 +10,7 @@ ___INFO___
     "id": "grain",
     "displayName": "Grain"
   },
+  "categories": ["ANALYTICS", "ATTRIBUTION", "CONVERSIONS", "DATA_WAREHOUSING", "HEAT_MAP", "MARKETING", "SESSION_RECORDING"],
   "description": "Send events to Grain analytics. Supports initialization, custom event tracking, and user identification.",
   "containerContexts": [
     "WEB"
