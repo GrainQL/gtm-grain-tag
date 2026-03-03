@@ -18,7 +18,15 @@ ___INFO___
     "id": "grain",
     "displayName": "Grain"
   },
-  "categories": ["ANALYTICS", "ATTRIBUTION", "CONVERSIONS", "DATA_WAREHOUSING", "HEAT_MAP", "MARKETING", "SESSION_RECORDING"],
+  "categories": [
+    "ANALYTICS",
+    "ATTRIBUTION",
+    "CONVERSIONS",
+    "DATA_WAREHOUSING",
+    "HEAT_MAP",
+    "MARKETING",
+    "SESSION_RECORDING"
+  ],
   "description": "Send events to Grain analytics. Supports initialization, custom event tracking, and user identification.",
   "containerContexts": [
     "WEB"
@@ -35,9 +43,18 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Tag Type",
     "macrosInSelect": false,
     "selectItems": [
-      { "value": "init", "displayValue": "Initialization" },
-      { "value": "event", "displayValue": "Custom Event" },
-      { "value": "identify", "displayValue": "Identify User" }
+      {
+        "value": "init",
+        "displayValue": "Initialization"
+      },
+      {
+        "value": "event",
+        "displayValue": "Custom Event"
+      },
+      {
+        "value": "identify",
+        "displayValue": "Identify User"
+      }
     ],
     "simpleValueType": true,
     "defaultValue": "init",
@@ -49,11 +66,17 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Tenant ID",
     "simpleValueType": true,
     "valueValidators": [
-      { "type": "NON_EMPTY" }
+      {
+        "type": "NON_EMPTY"
+      }
     ],
     "help": "Your Grain tenant ID (UUID or alias).",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -63,7 +86,11 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "help": "Override the default API endpoint. Leave blank to use the default (https://clientapis.grainql.com).",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -72,15 +99,28 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Consent Mode",
     "macrosInSelect": false,
     "selectItems": [
-      { "value": "auto", "displayValue": "Auto (default)" },
-      { "value": "opt-in", "displayValue": "Opt-in" },
-      { "value": "opt-out", "displayValue": "Opt-out" }
+      {
+        "value": "auto",
+        "displayValue": "Auto (default)"
+      },
+      {
+        "value": "opt-in",
+        "displayValue": "Opt-in"
+      },
+      {
+        "value": "opt-out",
+        "displayValue": "Opt-out"
+      }
     ],
     "simpleValueType": true,
     "defaultValue": "auto",
     "help": "Controls how the SDK handles user consent.",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -90,7 +130,11 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "defaultValue": true,
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -100,7 +144,11 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "defaultValue": true,
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -110,7 +158,11 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "defaultValue": true,
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -120,7 +172,11 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "defaultValue": false,
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "init", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "init",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -129,11 +185,17 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Event Name",
     "simpleValueType": true,
     "valueValidators": [
-      { "type": "NON_EMPTY" }
+      {
+        "type": "NON_EMPTY"
+      }
     ],
-    "help": "The name of the event to send (e.g. 'signup', 'purchase').",
+    "help": "The name of the event to send (e.g. \u0027signup\u0027, \u0027purchase\u0027).",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "event", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "event",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -156,7 +218,11 @@ ___TEMPLATE_PARAMETERS___
     ],
     "help": "Key-value pairs to send with the event.",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "event", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "event",
+        "type": "EQUALS"
+      }
     ]
   },
   {
@@ -165,11 +231,17 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "User ID",
     "simpleValueType": true,
     "valueValidators": [
-      { "type": "NON_EMPTY" }
+      {
+        "type": "NON_EMPTY"
+      }
     ],
     "help": "The user ID to associate with this visitor.",
     "enablingConditions": [
-      { "paramName": "tagType", "paramValue": "identify", "type": "EQUALS" }
+      {
+        "paramName": "tagType",
+        "paramValue": "identify",
+        "type": "EQUALS"
+      }
     ]
   }
 ]
@@ -265,8 +337,7 @@ ___WEB_PERMISSIONS___
   {
     "instance": {
       "key": {
-        "publicId": "logging",
-        "vpiId": "1"
+        "publicId": "logging"
       },
       "param": [
         {
@@ -286,8 +357,7 @@ ___WEB_PERMISSIONS___
   {
     "instance": {
       "key": {
-        "publicId": "inject_script",
-        "vpiId": "2"
+        "publicId": "inject_script"
       },
       "param": [
         {
@@ -312,8 +382,7 @@ ___WEB_PERMISSIONS___
   {
     "instance": {
       "key": {
-        "publicId": "access_globals",
-        "vpiId": "3"
+        "publicId": "access_globals"
       },
       "param": [
         {
@@ -324,76 +393,196 @@ ___WEB_PERMISSIONS___
               {
                 "type": 3,
                 "mapKey": [
-                  { "type": 1, "string": "key" },
-                  { "type": 1, "string": "read" },
-                  { "type": 1, "string": "write" },
-                  { "type": 1, "string": "execute" }
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
                 ],
                 "mapValue": [
-                  { "type": 1, "string": "__GRAIN_CONFIG__" },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": false }
+                  {
+                    "type": 1,
+                    "string": "__GRAIN_CONFIG__"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
                 ]
               },
               {
                 "type": 3,
                 "mapKey": [
-                  { "type": 1, "string": "key" },
-                  { "type": 1, "string": "read" },
-                  { "type": 1, "string": "write" },
-                  { "type": 1, "string": "execute" }
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
                 ],
                 "mapValue": [
-                  { "type": 1, "string": "GrainTag" },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": false },
-                  { "type": 8, "boolean": false }
+                  {
+                    "type": 1,
+                    "string": "GrainTag"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
                 ]
               },
               {
                 "type": 3,
                 "mapKey": [
-                  { "type": 1, "string": "key" },
-                  { "type": 1, "string": "read" },
-                  { "type": 1, "string": "write" },
-                  { "type": 1, "string": "execute" }
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
                 ],
                 "mapValue": [
-                  { "type": 1, "string": "GrainTag.init" },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": false },
-                  { "type": 8, "boolean": true }
+                  {
+                    "type": 1,
+                    "string": "GrainTag.init"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
                 ]
               },
               {
                 "type": 3,
                 "mapKey": [
-                  { "type": 1, "string": "key" },
-                  { "type": 1, "string": "read" },
-                  { "type": 1, "string": "write" },
-                  { "type": 1, "string": "execute" }
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
                 ],
                 "mapValue": [
-                  { "type": 1, "string": "GrainTag.track" },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": false },
-                  { "type": 8, "boolean": true }
+                  {
+                    "type": 1,
+                    "string": "GrainTag.track"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
                 ]
               },
               {
                 "type": 3,
                 "mapKey": [
-                  { "type": 1, "string": "key" },
-                  { "type": 1, "string": "read" },
-                  { "type": 1, "string": "write" },
-                  { "type": 1, "string": "execute" }
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
                 ],
                 "mapValue": [
-                  { "type": 1, "string": "GrainTag.identify" },
-                  { "type": 8, "boolean": true },
-                  { "type": 8, "boolean": false },
-                  { "type": 8, "boolean": true }
+                  {
+                    "type": 1,
+                    "string": "GrainTag.identify"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
                 ]
               }
             ]
@@ -420,3 +609,5 @@ Created on 2026-03-03.
 
 Grain Tag - Google Tag Manager Custom Template
 https://grainql.com
+
+
