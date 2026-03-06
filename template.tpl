@@ -256,6 +256,7 @@ const setInWindow = require('setInWindow');
 const copyFromWindow = require('copyFromWindow');
 const callInWindow = require('callInWindow');
 const makeTableMap = require('makeTableMap');
+const encodeUri = require('encodeUri');
 
 var SDK_BASE_URL = 'https://tag.grainql.com/v4/';
 
@@ -289,7 +290,7 @@ function handleInit() {
   // Set config on window for the SDK to read during init
   setInWindow('__GRAIN_CONFIG__', config, true);
 
-  var sdkUrl = SDK_BASE_URL + data.tenantId + '.js';
+  var sdkUrl = SDK_BASE_URL + encodeUri(data.tenantId) + '.js';
 
   injectScript(sdkUrl, function() {
     log('Grain Tag: SDK loaded successfully');
