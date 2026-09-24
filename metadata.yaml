@@ -1,5 +1,5 @@
 homepage: "https://grainql.com"
 documentation: "https://docs.grainql.com"
 versions:
-  - sha: HEAD
+  - sha: 0d28834ca1f1c90cbe81f47be4f04b1b81503ad1
     changeNotes: "Initial release - supports initialization, custom events, and user identification."
